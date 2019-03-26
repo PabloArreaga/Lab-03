@@ -27,6 +27,7 @@ namespace ACPA_Lab02.Controllers
 				string path = Server.MapPath("~/Uploads/");
 				if (!Directory.Exists(path))
 				{
+
 					Directory.CreateDirectory(path);
 				}
 				filePath = path + Path.GetFileName(postedFile.FileName);
