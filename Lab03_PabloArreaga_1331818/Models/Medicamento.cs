@@ -2,10 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.Collections;
+using Lab03_PabloArreaga_1331818.Helpers;
 
 namespace Lab03_PabloArreaga_1331818.Models
 {
-	public class Medicamento
+	public class Medicamento : IComparable, IEnumerable
 	{
+		[Display(Name = "Id")]
+		public int id { get; set; }
+		[Display(Name = "Nombre")]
+		public string nombre { get; set; }
+		[Display(Name = "Descripción")]
+		public string descripcion { get; set; }
+		[Display(Name = "Productora")]
+		public string productora { get; set; }
+		[Display(Name = "Precio")]
+		public double precio { get; set; }
+		[Display(Name = "Existencia")]
+		public int existencia { get; set; }
+
+		public int CompareTo(object obj)
+		{
+			var comparador = (Medicamento)obj;
+			return nombre.CompareTo(comparador.id);
+		}
+		public IEnumerator GetEnumerator()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

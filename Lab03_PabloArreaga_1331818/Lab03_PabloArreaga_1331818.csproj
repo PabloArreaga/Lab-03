@@ -126,7 +126,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\estructuras\estructurasAreaRegistration.cs" />
     <Compile Include="Controllers\FarmaciaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -134,6 +133,8 @@
     </Compile>
     <Compile Include="Helpers\Data.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\Medicamento.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,7 +148,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\estructuras\Views\web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -177,9 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\estructuras\Controllers\" />
-    <Folder Include="Areas\estructuras\Models\" />
-    <Folder Include="Areas\estructuras\Views\Shared\" />
+    <Folder Include="Areas\" />
     <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
